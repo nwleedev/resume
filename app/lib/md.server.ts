@@ -1,5 +1,5 @@
 import { bundleMDX } from "mdx-bundler";
-import { readFile, resolve } from "./fs.server";
+import resume from "~/data/resume.json";
 
 export type Frontmatter = {
   title: string;
@@ -11,16 +11,14 @@ export type Frontmatter = {
   draft: boolean;
 };
 
-export async function toArticle(filename: `${string}.mdx`) {
-  const file = await readFile(resolve(filename));
-
+export async function toArticle() {
   const [rehypeHighlight, remarkGfm] = await Promise.all([
     import("rehype-highlight").then((module) => module.default),
     import("remark-gfm").then((module) => module.default),
   ]);
 
   const article = await bundleMDX<Frontmatter>({
-    source: file,
+    source: resume.file,
     cwd: process.cwd(),
     esbuildOptions: (options) => {
       options.loader = {

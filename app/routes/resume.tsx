@@ -50,7 +50,7 @@ export const links: LinksFunction = () => {
 };
 
 export async function loader() {
-  const article = await toArticle("./app/data/resume.mdx");
+  const article = await toArticle();
 
   const { frontmatter, code } = article;
   return json({ frontmatter, code });
