@@ -1,0 +1,43 @@
+article > * {
+  $margin: 0.625rem;
+  margin-top: $margin !important;
+  margin-bottom: $margin !important;
+}
+
+article > h1,
+article > h2,
+article > h3,
+article > h4,
+article > h5,
+article > h6 {
+  $margin: 1rem;
+  margin-top: $margin !important;
+  margin-bottom: $margin !important;
+}
+
+article > p {
+  $margin: 0.425rem;
+  margin-top: $margin !important;
+  margin-bottom: $margin !important;
+}
+
+article > strong + p {
+  margin: 0;
+}
+
+.resumeWrapper {
+  // scrollbar-gutter: stable;
+  &::-webkit-scrollbar {
+    width: 8px;
+    scrollbar-gutter: stable;
+    & * {
+      background-color: transparent;
+    }
+  }
+  &::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded-full mx-2;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
