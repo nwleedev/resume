@@ -1,0 +1,55 @@
+article > * {
+  margin-top: 0.475rem !important;
+  margin-bottom: 0.475rem !important;
+}
+
+article > h1,
+article > h2,
+article > h3,
+article > h4,
+article > h5,
+article > h6 {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+article p {
+  margin-top: 0.125rem !important;
+  margin-bottom: 0.2rem !important;
+}
+
+article > strong + p {
+  margin: 0;
+  font-size: 18px !important;
+}
+
+article > p strong {
+  font-size: 20px;
+}
+
+article ul,
+article li {
+  margin-top: 0.075rem !important;
+  margin-bottom: 0.175rem !important;
+}
+
+article .introduce p {
+  margin-top: 0.0625rem !important;
+  margin-bottom: 0.0625rem !important;
+}
+
+.resumeWrapper::-webkit-scrollbar {
+  width: 8px;
+  scrollbar-gutter: stable;
+}
+.resumeWrapper::-webkit-scrollbar * {
+  background-color: transparent;
+}
+.resumeWrapper::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded-full mx-2;
+}
+.resumeWrapper::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/*# sourceMappingURL=article.css.map */

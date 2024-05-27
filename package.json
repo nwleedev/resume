@@ -5,36 +5,26 @@
   "type": "module",
   "scripts": {
     "build": "remix vite:build",
-    "deploy-pages": "pnpm run build && wrangler pages deploy ./build/client",
     "dev": "remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
-    "start": "wrangler pages dev ./build/client",
+    "start": "remix-serve ./build/server/index.js",
     "check": "tsc",
-    "typegen": "wrangler types",
-    "preview": "pnpm run build && wrangler pages dev ./build/client",
-    "build-cf-types": "wrangler types",
     "sass": "sass --watch app/:app/",
-    "mdx": "pnpm exec tsc scripts/mdx.ts --module nodenext && node ./scripts/mdx.js"
+    "mdx": "node --loader ts-node/esm ./scripts/file.ts"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^3.0.1",
-    "@remix-run/cloudflare": "^2.8.1",
-    "@remix-run/cloudflare-pages": "^2.8.1",
-    "@remix-run/node": "^2.8.1",
-    "@remix-run/react": "^2.8.1",
-    "@remix-run/serve": "^2.8.1",
+    "@remix-run/cloudflare": "^2.9.2",
+    "@remix-run/cloudflare-pages": "^2.9.2",
+    "@remix-run/react": "^2.9.2",
     "date-fns": "^3.6.0",
     "isbot": "^4.1.0",
-    "mdx-bundler": "^10.0.2",
-    "miniflare": "^3.20240320.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "rehype-highlight": "^7.0.0",
-    "remark-gfm": "^4.0.0"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240329.0",
-    "@remix-run/dev": "^2.8.1",
+    "@cloudflare/workers-types": "^4.20240512.0",
+    "@mdx-js/rollup": "^3.0.1",
+    "@remix-run/dev": "^2.9.2",
     "@tailwindcss/typography": "^0.5.12",
     "@types/node": "^20.12.2",
     "@types/react": "^18.2.20",
@@ -48,13 +38,19 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "node-fetch": "^3.3.2",
     "postcss": "^8.4.38",
+    "rehype-highlight": "^7.0.0",
+    "remark-frontmatter": "^5.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-mdx-frontmatter": "^4.0.0",
     "sass": "^1.72.0",
     "tailwindcss": "^3.4.3",
+    "ts-node": "^10.9.2",
     "typescript": "^5.1.6",
     "vite": "^5.1.0",
     "vite-tsconfig-paths": "^4.2.1",
-    "wrangler": "^3.41.0"
+    "wrangler": "^3.57.1"
   },
   "engines": {
     "node": ">=18.0.0"

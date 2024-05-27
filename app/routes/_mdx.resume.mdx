@@ -1,0 +1,186 @@
+---
+meta:
+  title: "이력서"
+  description: "이노원 프론트엔드 개발자 이력서입니다."
+  createdAt: "2024-05-10T06:30:00+00:00"
+  updatedAt: "2024-05-27T01:57:00+00:00"
+headers:
+  content-type: text/html
+  cache-control: public, max-age=604800, s-maxage=604800, must-revalidate
+---
+
+import Divider from "../components/Divider";
+import Period from "../components/Period";
+import ProjectName from "../components/ProjectName";
+import "../styles/article.css";
+
+export const meta = () => {
+  return [
+    { title: `이노원 이력서` },
+    {
+      name: "description",
+      content: `프론트엔드 개발자 이노원입니다.`,
+    },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: "https://nwlee.com/resume/full",
+    },
+    { property: "og:title", content: `이노원 이력서` },
+    { property: "og:url", content: `https://nwlee.com/resume` },
+    { property: "og:description", content: `프론트엔드 개발자 이노원입니다.` },
+    {
+      property: "og:image",
+      content: `/nwlee.png`,
+    },
+    { name: "twitter:card", content: "summary" },
+    { name: "twitter:title", content: `이노원 이력서` },
+    {
+      name: "twitter:description",
+      content: `프론트엔드 개발자 이노원입니다.`,
+    },
+    {
+      name: "twitter:image",
+      content: `/nwlee.png`,
+    },
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        url: "https://nwlee.com",
+        name: `이노원 이력서`,
+        description: `프론트엔드 개발자 이노원입니다.`,
+      },
+    },
+  ];
+};
+
+export const headers = frontmatter.headers;
+
+<div className="!my-0 introduce">
+개발자로서 우리가 개발한 어플리케이션이 유저들에게 도움을 주는 것을 볼 때마다 보람을 느낍니다. 프론트엔드를 개발함으로서 우리가 개발하는 서비스로 유저들이 각자의 문제점을 해결할 수 있도록 필요한 작업을 진행했습니다.
+
+사용자에게 더 친화적인 프론트엔드를 개발하기 위해 팀원들과 지속적으로 커뮤니케이션하고 프로젝트를 개선합니다.
+
+웹 페이지에서 네트워크 요청을 최적화하고 서버 사이드 렌더링을 통해 SEO 작업한 경험이 있습니다.
+
+</div>
+
+<Divider />
+
+## 경력
+
+**Quarkonix**
+
+<Period>2023. 01 ~ 2024. 04.</Period>
+
+React, TypeScript 기반의 Web3 프론트엔드를 개발했습니다.
+
+- 네트워크 요청 횟수 최적화
+- 컨트랙트, 백엔드 개발 팀원들과 커뮤니케이션 및 협업
+- 프로젝트 이슈 관리 및 리팩토링
+
+### 프로젝트
+
+<ProjectName>Chromatic Protocol</ProjectName>
+
+<Period>2023. 04 ~ 2024. 04.</Period>
+
+보유 중인 자산을 투자, 또는 유동성으로 예치할 수 있는 탈중앙화 암호화폐 선물 거래소입니다.
+
+- TypeScript, React 기반 실시간 암호화폐 선물 거래소 프론트엔드 개발, Storybook으로 UI 컴포넌트 테스트
+- SWR과 Suspense, lazy로 네트워크 요청 횟수를 최적화하여 429 에러가 발생하는 빈도를 줄였습니다.
+- Patch Package로 라이브러리에 이슈가 있을 때 이슈 원인을 파악하여, 웹소켓 및 지갑 상태 관리 에러를 방지했습니다.
+- 컨트랙트 개발 팀원들과 지속적으로 커뮤니케이션하여 증거금, 레버리지, 점유하는 유동성, 예상 수수료 등의 사용자의 입력값이 유효한지 검증했습니다.
+- Vite Plugin PWA를 도입하여 프론트엔드를 새로 배포했을 때 사용자에게 알림을 보여줄 수 있도록 작업했습니다.
+- 프론트엔드의 모달 상태를 전역 상태에서 관리하도록 리팩토링했습니다.
+
+<Divider sub={true} />
+
+<ProjectName>New Frontier</ProjectName>
+
+<Period>2023. 01. ~ 2023. 04.</Period>
+
+GMX 컨트랙트의 프론트엔드
+GMX 트레이더의 레퍼럴 계정을 하나로 통합하여 트레이더가 거래할 때 더 적은 수수료를 지불할 수 있는 웹 어플리케이션
+
+- TypeScript, SolidJS 기반 Web3 프론트엔드 개발
+- 지속적으로 SolidJS 스터디, PR 코드 리뷰 문화 형성
+
+<Divider />
+
+## 개인 프로젝트
+
+<ProjectName>useidioms.com</ProjectName>
+
+<Period>2024. 03. ~ 진행 중</Period>
+
+TypeScript, React 기반 영단어 학습 웹 프론트엔드를 개발했습니다.
+
+- React 프로젝트를 Remix 기반으로 리팩토링하여 서버 사이드 렌더링 및 검색 엔진 최적화를 작업했습니다.
+- 웹 페이지에 캐시를 설정, 및 이미지 렌더링을 최적화하여 Lighthouse의 Performance 점수를 50대에서 70대 후반으로 개선했습니다.
+- React Window로 그리드, 리스트 뷰에서 리스트 가상화, 무한 스크롤을 작업하여 프론트엔드 렌더링을 최적화했습니다.
+- 배포 과정, CORS, 서버 사이드 렌더링, 스크롤 최적화는 공유할 수 있도록 문서화했습니다.
+
+<Divider />
+
+## 포트폴리오
+
+- [깃허브 저장소](https://github.com/nwleedev?tab=repositories)
+- [블로그](https://blog.nwlee.com/)
+- [useidioms.com](https://useidioms.com/)
+
+<Divider />
+
+## 기술 스택
+
+- 언어 TypeScript
+
+  - 프로젝트에서 타입 관련 에러가 발생하는 것을 개발 과정에서 방지할 수 있습니다.
+  - 커스텀 Hooks을 작성할 때 타입 파라미터가 포함된 Props의 인터페이스를 작성할 수 있었습니다.
+  - `ts-node/esm` 로더를 적용하여 개발 과정에서는 별도의 자바스크립트 파일로 변환하지 않고 타입스크립트 파일을 실행시킬 수 있습니다.
+
+- 라이브러리 React
+
+  - `useSyncExternalStore`로 로컬 스토리지 및 미디어 쿼리를 포함한 `Window` 객체와 컴포넌트의 라이프사이클을 맞출 수 있었습니다.
+  - 커스텀 Hooks를 작성하여 컴포넌트 UI와 데이터 계산 로직을 분리할 수 있었습니다.
+  - 전역 상태 관리가 필요할 때는 지속적으로 유지보수가 되고 있는 Redux Toolkit을 채택했습니다.
+
+- 라이브러리 SWR
+
+  - 백엔드에서 데이터 요청 횟수를 최적화할 수 있었습니다.
+  - `Deduping Interval`을 설정하여 일정 시간 내에 똑같은 요청이 있으면 캐시된 데이터를 사용하도록 리팩토링했습니다.
+  - 비동기 작업이 발생하면 예상되는 값을 계산하여 데이터 요청 없이 현재 상태를 업데이트할 수 있었습니다.
+
+- 프레임워크 Remix
+
+  - React와 React Router DOM으로 구성된 프로젝트에서 적은 시간으로 SSR을 적용할 수 있었습니다.
+  - 로더, 액션, 메타 정보들을 하나의 파일에서 관리할 수 있습니다. 각각의 주소가 어떤 로더 및 액션을 보유하는지 더 빠르게 파악할 수 있었습니다.
+
+- 프레임워크 Tailwind CSS
+
+  - CSS 파일을 직접 작성하지 않고 스타일을 빠른 시간에 적용할 수 있었습니다.
+  - VS Code 확장 프로그램을 적용하여 직접 클릭하지 않은 클래스명은 축약함으로서 가독성을 개선할 수 있었습니다.
+
+- 개발 도구 Visual Studio Code
+  - 확장 라이브러리를 통해 개발 생산성을 높일 수 있습니다.
+  - Live Share로 현재 개발 중인 코드를 팀원들에게 공유할 수 있습니다.
+
+<Divider />
+
+## 학업 사항
+
+<ProjectName>부스트캠프 웹 & 모바일 6기 멤버십</ProjectName>
+
+<Period>2021. 08 ~ 2021. 12.</Period>
+
+- 주기적으로 팀원들과 커뮤니케이션하면서 과제 해결 및 프로젝트 진행했습니다.
+- Git flow 적용
+  - 프로젝트를 일관성있게 관리하는 방법 학습
+  - PR 생성할 때마다 코드 리뷰 및 승인 후 병합하는 문화 형성
+
+<ProjectName>단국대학교</ProjectName>
+
+<Period>2016. 03. ~ 2022. 02.</Period>
+
+- 공과대학 응용컴퓨터공학과 졸업

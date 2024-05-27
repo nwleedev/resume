@@ -1,5 +1,5 @@
 article > * {
-  $margin: 0.625rem;
+  $margin: 0.475rem;
   margin-top: $margin !important;
   margin-bottom: $margin !important;
 }
@@ -10,19 +10,29 @@ article > h3,
 article > h4,
 article > h5,
 article > h6 {
-  $margin: 1rem;
+  $margin: 0.5rem;
   margin-top: $margin !important;
   margin-bottom: $margin !important;
 }
 
-article > p {
-  $margin: 0.425rem;
-  margin-top: $margin !important;
-  margin-bottom: $margin !important;
+article p {
+  margin-top: 0.125rem !important;
+  margin-bottom: 0.2rem !important;
 }
 
 article > strong + p {
   margin: 0;
+  font-size: 18px !important;
+}
+
+article > p strong {
+  font-size: 20px;
+}
+
+article ul,
+article li {
+  margin-top: 0.075rem !important;
+  margin-bottom: 0.175rem !important;
 }
 
 .resumeWrapper {
