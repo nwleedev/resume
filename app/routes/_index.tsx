@@ -1,6 +1,6 @@
 // TODO: Should be a main page
 
-import { redirect } from "@remix-run/node";
+import { redirect } from "@remix-run/cloudflare";
 
 export async function loader() {
   return redirect("/resume");

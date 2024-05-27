@@ -15,7 +15,7 @@
   "dependencies": {
     "@remix-run/cloudflare": "^2.9.2",
     "@remix-run/cloudflare-pages": "^2.9.2",
-    "@remix-run/react": "^2.8.1",
+    "@remix-run/react": "^2.9.2",
     "date-fns": "^3.6.0",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
@@ -24,7 +24,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240512.0",
     "@mdx-js/rollup": "^3.0.1",
-    "@remix-run/dev": "^2.8.1",
+    "@remix-run/dev": "^2.9.2",
     "@tailwindcss/typography": "^0.5.12",
     "@types/node": "^20.12.2",
     "@types/react": "^18.2.20",
