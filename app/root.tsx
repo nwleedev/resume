@@ -17,7 +17,7 @@ export const links: LinksFunction = () => {
   ];
 };
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export default function Root() {
   return (
     <html lang="en">
       <head>
@@ -44,19 +44,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <Meta />
         <Links />
       </head>
       <body>
-        <div id="entry">{children}</div>
+        <div id="entry">
+          <Outlet />
+        </div>
+        <div id="modal"></div>
         <ScrollRestoration />
         <Scripts />
       </body>
     </html>
   );
-}
-
-export default function App() {
-  return <Outlet />;
 }
