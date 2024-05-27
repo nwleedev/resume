@@ -42,7 +42,7 @@ devDependencies:
     version: 0.5.12(tailwindcss@3.4.3)
   '@types/node':
     specifier: ^20.12.2
-    version: 20.12.2
+    version: 20.12.3
   '@types/react':
     specifier: ^18.2.20
     version: 18.2.73
@@ -2075,7 +2075,6 @@ packages:
       '@babel/plugin-syntax-typescript': 7.24.1(@babel/core@7.24.3)
       '@vanilla-extract/babel-plugin-debug-ids': 1.0.5
       '@vanilla-extract/css': 1.14.2
-      esbuild: 0.17.19
       esbuild: 0.17.19
       eval: 0.1.8
       find-up: 5.0.0
