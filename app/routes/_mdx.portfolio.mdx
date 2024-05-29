@@ -10,6 +10,47 @@ import navbarScreen from "../screenshots/useidioms/navbar.webp";
 import idiomTopScreen from "../screenshots/useidioms/idiom-top.webp";
 import idiomBottomScreen from "../screenshots/useidioms/idiom-bottom.webp";
 
+export const meta = () => {
+  return [
+    { title: `이노원 포트폴리오` },
+    {
+      name: "description",
+      content: `프론트엔드 개발자 이노원입니다.`,
+    },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: "https://nwlee.com/portfolio",
+    },
+    { property: "og:title", content: `이노원 포트폴리오` },
+    { property: "og:url", content: `https://nwlee.com/portfolio` },
+    { property: "og:description", content: `프론트엔드 개발자 이노원입니다.` },
+    {
+      property: "og:image",
+      content: `/nwlee.png`,
+    },
+    { name: "twitter:card", content: "summary" },
+    { name: "twitter:title", content: `이노원 포트폴리오` },
+    {
+      name: "twitter:description",
+      content: `프론트엔드 개발자 이노원입니다.`,
+    },
+    {
+      name: "twitter:image",
+      content: `/nwlee.png`,
+    },
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        url: "https://nwlee.com",
+        name: `이노원 포트폴리오`,
+        description: `프론트엔드 개발자 이노원입니다.`,
+      },
+    },
+  ];
+};
+
 ## Use Idioms
 
 <div className="logos">
