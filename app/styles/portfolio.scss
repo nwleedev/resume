@@ -1,0 +1,42 @@
+.thumbnails {
+  overflow-x: auto;
+  & img {
+    height: 28rem;
+    width: auto;
+    object-fit: cover;
+    margin: 0;
+  }
+  & > div {
+    display: flex;
+    column-gap: 1.5rem;
+  }
+
+  &::-webkit-scrollbar {
+    height: 8px;
+    scrollbar-gutter: stable;
+    & * {
+      background-color: transparent;
+    }
+  }
+  &::-webkit-scrollbar-thumb {
+    @apply bg-gray-800 rounded-full;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+
+.logos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  & img {
+    width: 14rem;
+    margin: 0;
+  }
+}
+
+strong {
+  font-size: 16px !important;
+}
