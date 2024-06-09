@@ -1,18 +1,30 @@
-import { Outlet } from "@remix-run/react";
+import { Outlet, useLocation } from "@remix-run/react";
 import { format } from "date-fns";
 import { ko } from "date-fns/locale";
 import { useMemo } from "react";
 
 export default function MDXPage() {
   const updatedAt = useMemo(() => {
-    return format("2024-05-27T01:57:00+00:00", "yyyy년 MM월 dd일", {
+    return format("2024-06-04T01:57:00+00:00", "yyyy년 MM월 dd일", {
       locale: ko,
     });
   }, []);
+  const location = useLocation();
+  const title = useMemo(() => {
+    switch (location.pathname) {
+      case "/resume": {
+        return "이노원";
+      }
+      case "/portfolio": {
+        return "이노원 포트폴리오";
+      }
+    }
+    return "이노원";
+  }, [location.pathname]);
   return (
     <div className="w-full mx-auto py-10 flex flex-col gap-y-2 bg-white px-4 sm:px-6 max-w-[1120px] mt-0 rounded shadow shadow-white">
       <section className="sm:flex sm:justify-between">
-        <h1 className="text-2xl sm:text-4xl font-bold">이노원</h1>
+        <h1 className="text-2xl sm:text-4xl font-bold">{title}</h1>
         <span className="text-xs sm:text-sm">{updatedAt}에 업데이트</span>
       </section>
       <div className="flex flex-col gap-y-1">
@@ -31,7 +43,7 @@ export default function MDXPage() {
           </div>
         </div>
       </div>
-      <article className="prose prose-base prose-slate mt-4 pb-10 max-w-full">
+      <article className="prose prose-base prose-slate pb-10 max-w-full">
         <Outlet />
       </article>
     </div>
