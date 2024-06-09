@@ -31,6 +31,12 @@ export default async function handleRequest(
     }
   );
 
+  responseHeaders.set("content-type", "text/html");
+  responseHeaders.set(
+    "cache-control",
+    "public, max-age=604800, s-max-age=604800, must-revalidate"
+  );
+
   if (isbot(request.headers.get("user-agent") || "")) {
     await body.allReady;
   }
