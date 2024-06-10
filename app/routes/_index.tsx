@@ -7,5 +7,5 @@ export async function loader() {
 }
 
 export default function Index() {
-  return <h1>Hello Remix!</h1>;
+  return <h1 className=" justify-between">Hello Remix!</h1>;
 }

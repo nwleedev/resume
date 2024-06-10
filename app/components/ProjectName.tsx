@@ -1,12 +1,13 @@
 interface ProjectNameProps {
-  children: string;
+  value?: string;
+  children?: string;
 }
 
 export default function ProjectName(props: ProjectNameProps) {
-  const { children } = props;
+  const { value, children } = props;
   return (
-    <p className="!my-0">
-      <strong>{children}</strong>
+    <p className="!my-0 !text-[18px]">
+      <strong>{value ?? children}</strong>
     </p>
   );
 }
