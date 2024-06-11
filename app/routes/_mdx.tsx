@@ -5,7 +5,7 @@ import { useMemo } from "react";
 
 export default function MDXPage() {
   const updatedAt = useMemo(() => {
-    return format("2024-06-10T01:57:00+00:00", "yyyy년 MM월 dd일", {
+    return format("2024-06-11T00:00:00+00:00", "yyyy년 MM월 dd일", {
       locale: ko,
     });
   }, []);
@@ -43,7 +43,7 @@ export default function MDXPage() {
           </div>
         </div>
       </div>
-      <article className="prose prose-base prose-slate pb-10 max-w-full leading-7">
+      <article className="prose prose-sm prose-slate pb-10 max-w-full leading-7">
         <Outlet />
       </article>
     </div>

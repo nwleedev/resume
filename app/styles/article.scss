@@ -16,9 +16,9 @@ article > h6 {
 }
 
 article p {
-  @apply leading-6;
-  margin-top: 0.125rem !important;
-  margin-bottom: 0.2rem !important;
+  @apply leading-5;
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
 }
 
 article > strong + p {
@@ -32,8 +32,8 @@ article > p strong {
 
 article ul,
 article li {
-  @apply leading-6;
-  margin-top: 0.075rem !important;
+  @apply leading-5;
+  margin-top: 0.125rem !important;
   margin-bottom: 0.175rem !important;
 }
 
