@@ -7,4 +7,3 @@ node_modules
 scripts/mdx.js
 app/thumbnails/*
 app/routes/blog.*
-app/routes/interviews.*
